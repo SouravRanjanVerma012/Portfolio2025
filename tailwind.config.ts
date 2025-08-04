@@ -63,6 +63,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			spacing: {
+				'section': 'var(--section-spacing)',
+			},
+			fontSize: {
+				'hero': 'var(--text-hero)',
+				'display': 'var(--text-display)',
+			},
+			backgroundImage: {
+				'hero-gradient': 'var(--hero-gradient)',
+				'text-gradient': 'var(--text-gradient)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
