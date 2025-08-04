@@ -1,73 +1,196 @@
-# Welcome to your Lovable project
+# 🚀 Sourav Verma - Portfolio
 
-## Project info
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Showcasing my skills, projects, and professional experience as a MERN Stack Developer.
 
-**URL**: https://lovable.dev/projects/2bb672ff-b4e0-463b-9ab6-68fe39b89e50
+## ✨ Features
 
-## How can I edit this code?
+### 🎨 **Modern Design**
+- **Responsive Design** - Works perfectly on all devices
+- **Dark/Light Theme Toggle** - Switch between themes with a click
+- **Smooth Animations** - Beautiful transitions and hover effects
+- **Professional UI** - Clean, modern interface using shadcn/ui components
 
-There are several ways of editing your application.
+### 📧 **Contact Form**
+- **EmailJS Integration** - Direct email sending to your inbox
+- **Form Validation** - Complete form validation and error handling
+- **Loading States** - Professional loading animations
+- **Success/Error Messages** - Clear user feedback
 
-**Use Lovable**
+### 📱 **Interactive Elements**
+- **Download Resume** - One-click resume download
+- **Project Links** - Direct links to GitHub repositories
+- **Social Media Integration** - Connected to all your social profiles
+- **Smooth Scrolling** - Navigation between sections
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2bb672ff-b4e0-463b-9ab6-68fe39b89e50) and start prompting.
+### 🛠 **Technical Features**
+- **TypeScript** - Type-safe development
+- **Vite** - Fast development and building
+- **Tailwind CSS** - Utility-first styling
+- **shadcn/ui** - Beautiful, accessible components
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🎯 **Sections**
 
-**Use your preferred IDE**
+1. **Hero Section** - Introduction and call-to-action
+2. **Skills** - Technical skills with progress bars
+3. **Projects** - Featured projects with GitHub links
+4. **Education** - Academic background and achievements
+5. **Services** - Services offered
+6. **Contact** - Contact form and social links
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 **Live Demo**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Visit the live portfolio: [Coming Soon - Deploy to Vercel]
 
-Follow these steps:
+## 🛠 **Technologies Used**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Build Tool**: Vite
+- **Email Service**: EmailJS
+- **Icons**: Lucide React
+- **Deployment**: Vercel (Ready)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📦 **Installation & Setup**
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/SouravRanjanVerma012/Portfolio.git
+
+# Navigate to project directory
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 🔧 **Configuration**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### EmailJS Setup
+The contact form uses EmailJS for email functionality:
 
-**Use GitHub Codespaces**
+1. **Service ID**: `service_v1opc3j`
+2. **Template ID**: `template_ugby5n8`
+3. **Public Key**: `TJU0mrJeeCHZ6auvq`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Customization
+- Update personal information in component files
+- Modify colors in `tailwind.config.ts`
+- Add/remove projects in `Projects.tsx`
+- Update social links in `Contact.tsx`
 
-## What technologies are used for this project?
+## 📁 **Project Structure**
 
-This project is built with:
+```
+Portfolio/
+├── src/
+│   ├── components/
+│   │   ├── Header.tsx          # Navigation with theme toggle
+│   │   ├── Hero.tsx           # Hero section with CTA
+│   │   ├── Skills.tsx         # Skills with progress bars
+│   │   ├── Projects.tsx       # Projects showcase
+│   │   ├── Education.tsx      # Education timeline
+│   │   ├── Services.tsx       # Services offered
+│   │   └── Contact.tsx        # Contact form with EmailJS
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+│   ├── favicon.svg            # Custom favicon
+│   └── Sourav_Verma_CV.pdf   # Resume file
+├── package.json
+└── README.md
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎨 **Customization Guide**
 
-## How can I deploy this project?
+### Adding New Projects
+Edit `src/components/Projects.tsx`:
+```typescript
+{
+  title: "Your Project",
+  description: "Project description",
+  technologies: ["React", "Node.js"],
+  githubUrl: "https://github.com/your-repo",
+  type: "Web Application"
+}
+```
 
-Simply open [Lovable](https://lovable.dev/projects/2bb672ff-b4e0-463b-9ab6-68fe39b89e50) and click on Share -> Publish.
+### Updating Skills
+Edit `src/components/Skills.tsx`:
+```typescript
+{ name: "Your Skill", level: 85 }
+```
 
-## Can I connect a custom domain to my Lovable project?
+### Changing Theme Colors
+Edit `tailwind.config.ts`:
+```typescript
+colors: {
+  primary: "your-color",
+  accent: "your-accent-color"
+}
+```
 
-Yes, you can!
+## 🚀 **Deployment**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Netlify
+1. Build the project: `npm run build`
+2. Upload `dist` folder to Netlify
+3. Get live URL
+
+### GitHub Pages
+1. Enable GitHub Pages in repository settings
+2. Set source to GitHub Actions
+3. Deploy automatically on push
+
+## 📧 **Contact Form Features**
+
+- **Real-time validation**
+- **Loading states**
+- **Success/error messages**
+- **Direct email delivery**
+- **Professional email template**
+
+## 🌟 **Key Features Implemented**
+
+✅ **Dark/Light Theme Toggle**
+✅ **EmailJS Contact Form**
+✅ **Download Resume Functionality**
+✅ **GitHub Project Links**
+✅ **Social Media Integration**
+✅ **Responsive Design**
+✅ **Smooth Animations**
+✅ **Professional UI/UX**
+✅ **TypeScript Support**
+✅ **Vite Build System**
+
+## 📄 **License**
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 **Developer**
+
+**Sourav Verma**
+- **Email**: sourav2000ranjan@gmail.com
+- **LinkedIn**: [Sourav Ranjan Verma](https://www.linkedin.com/in/sourav-ranjan-verma/)
+- **GitHub**: [SouravRanjanVerma012](https://github.com/SouravRanjanVerma012)
+- **Portfolio**: [Live Demo Coming Soon]
+
+---
+
+⭐ **Star this repository if you found it helpful!**
