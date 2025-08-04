@@ -17,64 +17,64 @@ import {
 const Services = () => {
   const services = [
     {
-      icon: Monitor,
-      title: "Web Design",
-      description: "Crafting visually appealing and user-friendly websites to enhance online experiences."
-    },
-    {
       icon: Code,
+      title: "MERN Stack Development",
+      description: "Building full-stack web applications using MongoDB, Express.js, React.js, and Node.js."
+    },
+    {
+      icon: Monitor,
       title: "Web Development",
-      description: "Building robust and interactive web applications, turning ideas into functional code."
-    },
-    {
-      icon: Palette,
-      title: "Branding",
-      description: "Creating a unique and memorable identity for businesses to stand out in the market."
-    },
-    {
-      icon: Layers,
-      title: "Logo Design",
-      description: "Designing distinctive and meaningful logos that represent a brand's essence."
-    },
-    {
-      icon: Camera,
-      title: "Graphic Design",
-      description: "Using visual elements to communicate messages and captivate audiences."
+      description: "Creating responsive and dynamic websites using modern technologies like React and Tailwind CSS."
     },
     {
       icon: Smartphone,
-      title: "UI/UX Design",
-      description: "Balancing aesthetics and functionality to create seamless and enjoyable user experiences."
-    },
-    {
-      icon: Box,
-      title: "3D Assets",
-      description: "Producing 3D models with a minimalist polygonal style for games or animations."
+      title: "Cross-Platform Apps",
+      description: "Developing mobile and web applications using React Native and progressive web technologies."
     },
     {
       icon: Search,
-      title: "SEO",
-      description: "Optimizing websites to improve search engine rankings and increase visibility."
+      title: "Database Management",
+      description: "Designing and implementing efficient database solutions using MySQL, MongoDB, and Firebase."
     },
     {
-      icon: Mail,
-      title: "Email Templates",
-      description: "Designing reusable and visually appealing templates for effective email communication."
-    },
-    {
-      icon: Instagram,
-      title: "Instagram Filters",
-      description: "Creating cool Meta filters for brands to increase customer engagement."
-    },
-    {
-      icon: TrendingUp,
-      title: "Ads",
-      description: "Posting compelling social media ads to improve brand visibility."
+      icon: Layers,
+      title: "IoT Solutions",
+      description: "Creating innovative IoT applications like Virtual Bus Conductor systems with real-time functionality."
     },
     {
       icon: Zap,
-      title: "No Code Solutions",
-      description: "Building powerful applications without traditional coding using modern no-code platforms."
+      title: "Geolocation Services",
+      description: "Implementing location-based features and attendance tracking systems using modern web APIs."
+    },
+    {
+      icon: Mail,
+      title: "Email Integration",
+      description: "Integrating email services and OTP verification systems using EmailJS and other tools."
+    },
+    {
+      icon: TrendingUp,
+      title: "AI-Powered Development",
+      description: "Leveraging AI tools like Claude, Cursor, and ChatGPT to streamline development processes."
+    },
+    {
+      icon: Box,
+      title: "System Architecture",
+      description: "Designing scalable and efficient system architectures for web and mobile applications."
+    },
+    {
+      icon: Palette,
+      title: "UI/UX Implementation",
+      description: "Converting designs into functional interfaces with attention to user experience and accessibility."
+    },
+    {
+      icon: Camera,
+      title: "API Development",
+      description: "Creating robust RESTful APIs and integrating third-party services for enhanced functionality."
+    },
+    {
+      icon: Instagram,
+      title: "Version Control",
+      description: "Managing code repositories and collaborative development using Git and modern workflows."
     }
   ];
 

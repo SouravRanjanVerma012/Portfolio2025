@@ -19,16 +19,17 @@ const Hero = () => {
         {/* Main Heading */}
         <div className="animate-slide-up">
           <h1 className="text-hero mb-6 text-gradient leading-tight">
-            Your Name
+            Sourav Verma
           </h1>
           
           <div className="text-2xl md:text-3xl mb-6 text-muted-foreground font-light">
-            I'm a <span className="text-foreground font-semibold">Designer</span>
+            I'm a <span className="text-foreground font-semibold">MERN Stack Developer</span>
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Crafting visual poetry since 2024. Passionate about creating engaging digital experiences 
-            that blend creativity with functionality.
+            Motivated MCA student and MERN stack developer skilled in building dynamic web applications. 
+            Experienced in creating efficient solutions like Virtual Bus Conductor and Attendance Management System, 
+            committed to leveraging technical expertise for organizational success.
           </p>
 
           {/* CTA Buttons */}

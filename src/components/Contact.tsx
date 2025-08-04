@@ -16,26 +16,26 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      value: "sourav2000ranjan@gmail.com",
+      href: "mailto:sourav2000ranjan@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 6207841629",
+      href: "tel:+916207841629"
     },
     {
       icon: MessageCircle,
       label: "WhatsApp",
       value: "Chat with me",
-      href: "https://wa.me/15551234567"
+      href: "https://wa.me/916207841629"
     }
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/souravverma", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/souravranjan-verma-b59292143/", label: "LinkedIn" },
     { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
     { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
