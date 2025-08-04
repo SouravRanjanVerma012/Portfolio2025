@@ -9,21 +9,24 @@ const Projects = () => {
       description: "Web application using JavaScript for geolocation tracking, Firebase for data storage, and EmailJS for OTP verification. Helps organizations manage employee attendance efficiently.",
       technologies: ["JavaScript", "Firebase", "EmailJS", "Geolocation API"],
       type: "Web Application",
-      features: ["Real-time location tracking", "OTP verification", "Database integration", "Employee management"]
+      features: ["Real-time location tracking", "OTP verification", "Database integration", "Employee management"],
+      githubUrl: "https://github.com/SouravRanjanVerma012/attendance-management-system"
     },
     {
-      title: "Virtual Bus Conductor",
-      description: "IoT-based interactive website for government transport ticketing. Built with HTML, CSS, and JavaScript DOM manipulation to provide seamless ticket booking experience.",
-      technologies: ["HTML", "CSS", "JavaScript", "IoT", "DOM"],
-      type: "IoT Solution",
-      features: ["Interactive UI", "Ticket booking", "Government transport", "Real-time updates"]
+      title: "Virtual Bus Services",
+      description: "Web application that allows users to book bus tickets, check bus locations, and view routes. Built with Node.js, Express, MongoDB, and modern web technologies.",
+      technologies: ["Node.js", "Express", "MongoDB", "HTML", "CSS", "JavaScript"],
+      type: "Web Application",
+      features: ["Bus ticket booking", "Route management", "Payment integration", "Real-time tracking"],
+      githubUrl: "https://github.com/SouravRanjanVerma012/Virtual-bus-services"
     },
     {
       title: "FitForge Buddy",
       description: "Cross-platform fitness app with workout tracking, nutrition management, and social features. Developed using React.js, React Native, and Tailwind CSS with AI-powered design tools.",
       technologies: ["React.js", "React Native", "Tailwind CSS", "AI Tools"],
       type: "Web/Mobile App",
-      features: ["Workout tracking", "Nutrition management", "Social features", "Cross-platform"]
+      features: ["Workout tracking", "Nutrition management", "Social features", "Cross-platform"],
+      githubUrl: "https://github.com/SouravRanjanVerma012/fitforge-buddy"
     }
   ];
 
@@ -89,13 +92,14 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <Globe className="h-3 w-3 mr-1" />
-                    Demo
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex-1">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="flex-1"
+                    onClick={() => window.open(project.githubUrl, '_blank')}
+                  >
                     <Github className="h-3 w-3 mr-1" />
-                    Code
+                    View Code
                   </Button>
                 </div>
               </CardContent>

@@ -2,6 +2,18 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 
 const Hero = () => {
+  const handleDownloadCV = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/Sourav_Verma_CV.pdf';
+    link.download = 'Sourav_Verma_CV.pdf';
+    link.target = '_blank';
+    
+    // Append to body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="container mx-auto text-center max-w-4xl">
@@ -27,21 +39,35 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Motivated MCA student and MERN stack developer skilled in building dynamic web applications. 
-            Experienced in creating efficient solutions like Virtual Bus Conductor and Attendance Management System, 
-            committed to leveraging technical expertise for organizational success.
+            Motivated MCA graduate and MERN stack developer skilled in building dynamic web applications. 
+            Experienced in creating efficient solutions like Virtual Bus Services and Attendance Management System, 
+            committed to leveraging technical expertise for organizational success as a fresher developer.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="group">
+            <Button 
+              size="lg" 
+              className="group"
+              onClick={() => {
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               View My Work
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button variant="outline" size="lg" className="group">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="group"
+              onClick={handleDownloadCV}
+            >
               <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-              Download CV
+              Download Resume
             </Button>
           </div>
         </div>

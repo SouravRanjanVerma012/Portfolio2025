@@ -1,13 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Theme toggle function
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode;
+    setIsDarkMode(newTheme);
+    
+    if (newTheme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
+  // Initialize theme on component mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDarkMode(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
 
   const navigation = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Education", href: "#education" },
@@ -35,17 +60,45 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            
+            {/* Theme Toggle Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              className="ml-4"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </Button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="flex items-center space-x-2 md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -62,6 +115,29 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
+              
+              {/* Theme Toggle in Mobile Menu */}
+              <div className="flex items-center justify-between pt-2 border-t border-border mt-2">
+                <span className="text-sm font-medium text-muted-foreground">Theme</span>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={toggleTheme}
+                  className="flex items-center space-x-2"
+                >
+                  {isDarkMode ? (
+                    <>
+                      <Sun className="h-4 w-4" />
+                      <span className="text-sm">Light</span>
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="h-4 w-4" />
+                      <span className="text-sm">Dark</span>
+                    </>
+                  )}
+                </Button>
+              </div>
             </div>
           </nav>
         )}

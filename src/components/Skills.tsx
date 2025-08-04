@@ -13,6 +13,7 @@ const Skills = () => {
     { name: "MySQL", level: 80 },
     { name: "Firebase", level: 75 },
     { name: "Git", level: 80 },
+    { name: "Razorpay", level: 75 },
   ];
 
   return (

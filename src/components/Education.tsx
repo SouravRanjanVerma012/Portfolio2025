@@ -8,7 +8,7 @@ const Education = () => {
       institution: "Panjab Technical University",
       college: "Chandigarh Group of Colleges, Jhanjeri",
       duration: "June 2023 - June 2025",
-      type: "ongoing"
+      type: "completed"
     },
     {
       degree: "Bachelor of Science Honours in Physics",
