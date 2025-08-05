@@ -1,16 +1,27 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Globe } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
+      title: "AshterDesigns SPA",
+      description: "Modern Single Page Application for interior design services with AI-powered design inspiration, contact forms, and responsive design. Built with Next.js, TypeScript, and Tailwind CSS, optimized for static deployment.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "AI Integration"],
+      type: "Web Application",
+      features: ["AI Design Assistant", "Contact Forms", "Responsive Design", "Static Deployment"],
+      githubUrl: "https://github.com/SouravRanjanVerma012/SPA_For_AshterDesigns",
+      liveUrl: "https://ashterdesigns.vercel.app",
+      emoji: "🎨"
+    },
+    {
       title: "Attendance Management System",
       description: "Web application using JavaScript for geolocation tracking, Firebase for data storage, and EmailJS for OTP verification. Helps organizations manage employee attendance efficiently.",
       technologies: ["JavaScript", "Firebase", "EmailJS", "Geolocation API"],
       type: "Web Application",
       features: ["Real-time location tracking", "OTP verification", "Database integration", "Employee management"],
-      githubUrl: "https://github.com/SouravRanjanVerma012/attendance-management-system"
+      githubUrl: "https://github.com/SouravRanjanVerma012/attendance-management-system",
+      emoji: "📊"
     },
     {
       title: "Virtual Bus Services",
@@ -18,7 +29,8 @@ const Projects = () => {
       technologies: ["Node.js", "Express", "MongoDB", "HTML", "CSS", "JavaScript"],
       type: "Web Application",
       features: ["Bus ticket booking", "Route management", "Payment integration", "Real-time tracking"],
-      githubUrl: "https://github.com/SouravRanjanVerma012/Virtual-bus-services"
+      githubUrl: "https://github.com/SouravRanjanVerma012/Virtual-bus-services",
+      emoji: "🚌"
     },
     {
       title: "FitForge Buddy",
@@ -26,7 +38,8 @@ const Projects = () => {
       technologies: ["React.js", "React Native", "Tailwind CSS", "AI Tools"],
       type: "Web/Mobile App",
       features: ["Workout tracking", "Nutrition management", "Social features", "Cross-platform"],
-      githubUrl: "https://github.com/SouravRanjanVerma012/fitforge-buddy"
+      githubUrl: "https://github.com/SouravRanjanVerma012/fitforge-buddy",
+      emoji: "💪"
     }
   ];
 
@@ -44,9 +57,17 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={project.title}
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up"
+              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up overflow-hidden"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
+              <CardHeader className="p-0">
+                <div className="w-full h-48 bg-gradient-to-br from-accent/20 to-secondary/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-2">{project.emoji}</div>
+                    <div className="text-sm text-muted-foreground font-medium">{project.title}</div>
+                  </div>
+                </div>
+              </CardHeader>
               <CardContent className="p-6">
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
@@ -101,6 +122,17 @@ const Projects = () => {
                     <Github className="h-3 w-3 mr-1" />
                     View Code
                   </Button>
+                  {project.liveUrl && (
+                    <Button 
+                      size="sm" 
+                      variant="default" 
+                      className="flex-1"
+                      onClick={() => window.open(project.liveUrl, '_blank')}
+                    >
+                      <Globe className="h-3 w-3 mr-1" />
+                      Live Demo
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
