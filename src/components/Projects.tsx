@@ -28,10 +28,18 @@ const Projects = () => {
       features: ["Workout tracking", "Nutrition management", "Social features", "Cross-platform"],
       githubUrl: "https://github.com/SouravRanjanVerma012/fitforge-buddy"
     }
+    ,{
+      title: "D2D Cart Admin Panel",
+      description: "Designed and developed a fully responsive Angular admin panel for D2D Cart enabling seamless product, category, order, and customer management. Optimized for desktops, tablets, and mobiles",
+      technologies: ["JavaScript", "Angular", " API"],
+      type: "Web Application",
+      features: ["Real-time data management", "Role-based access", "Advanced Dashboard Analytics", "Seamless management of products, categories, customers"],
+      githubUrl: "https://github.com/SouravRanjanVerma012/codknox_fetchit"
+    }
   ];
 
   return (
-    <section id="projects" className="py-section px-6">
+    <section id="projects" className="py-secn px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-display mb-4 text-gradient">Featured Projects</h2>

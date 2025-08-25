@@ -3,6 +3,7 @@ import { Progress } from "@/components/ui/progress";
 const Skills = () => {
   const skills = [
     { name: "React", level: 90 },
+    { name: "Angular", level: 90 },
     { name: "JavaScript", level: 85 },
     { name: "Node.js", level: 80 },
     { name: "MongoDB", level: 75 },
